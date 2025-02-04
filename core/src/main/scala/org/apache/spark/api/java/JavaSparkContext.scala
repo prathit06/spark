@@ -560,6 +560,8 @@ class JavaSparkContext(val sc: SparkContext) extends Closeable {
    * this method to stop SparkContext and pass client side correct exit code to scheduler backend.
    * Then scheduler backend should send the exit code to corresponding resource scheduler
    * to keep consistent.
+   * 
+   * This method is a direct call to the stop method from the underlying SparkContext.
    *
    * @param exitCode Specified exit code that will passed to scheduler backend in client mode.
    */
